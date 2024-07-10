@@ -4,7 +4,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-
+import { EffectCoverflow,Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
 const Blog = () => {
     return (
         <div className='py-10'>
@@ -20,24 +23,23 @@ const Blog = () => {
                 </div>
             </div>
             <Swiper
-                watchSlidesProgress={true}
-                slidesPerView={3}
-                spaceBetween={30}
-                breakpoints={{
-                    320: {
-                        slidesPerView: 1,
-                        spaceBetween: 10,
-                    },
-                    640: {
-                        slidesPerView: 2,
-                        spaceBetween: 20,
-                    },
-                    1024: {
-                        slidesPerView: 3,
-                        spaceBetween: 30,
-                    },
-                }}
-                className="mySwiper py-10"
+               effect={'coverflow'}
+               grabCursor={true}
+               centeredSlides={true}
+               slidesPerView={'auto'}
+               coverflowEffect={{
+                 rotate: 50,
+                 stretch: 0,
+                 depth: 100,
+                 modifier: 1,
+                 slideShadows: true,
+               }}
+               autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+               modules={[Autoplay,EffectCoverflow ]}
+                // className="mySwiper py-10"
             >
                 <SwiperSlide>
                     <div className='pe-10'>

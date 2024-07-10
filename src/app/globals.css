@@ -18,3 +18,10 @@
   background: #f5c4b2;
   border-radius: 10px;
 }
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px !important;
+  height: 300px !important;
+}
