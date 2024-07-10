@@ -25,3 +25,14 @@
   width: 300px !important;
   height: 300px !important;
 }
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: red;
+  transform-origin: 0%;
+  z-index: 100000000000000000;
+}

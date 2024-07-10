@@ -1,10 +1,14 @@
 "use client"
 import React from 'react';
-import NextProgress from 'next-progress';
-
+import { ProgressBar  as NextProgress} from 'nextjs-progressbar';
 const PogressBar = () => {
     return (
-        <NextProgress   />
+        <NextProgress
+        color="#ff0000"
+        startPosition={0.3}
+        stopDelayMs={200}
+        height={3}
+      />
        
     );
 };
