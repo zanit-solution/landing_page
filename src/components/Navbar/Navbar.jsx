@@ -50,9 +50,8 @@ const Navbar = () => {
   return (
     <div className={`top-0 fixed   z-50  w-full `}>
       <nav
-        className={`flex items-center mx-auto     container justify-between px-4 py-4 md:p-0 ${
-          shadow ? "shadow-md backdrop-blur-lg" : " bg-[#FEF6F3]"
-        }`}
+        className={`flex items-center mx-auto     container justify-between px-4 py-4 md:p-0 ${shadow ? "shadow-md backdrop-blur-lg" : " bg-[#FEF6F3]"
+          }`}
       >
         <div>
           <Image width={70} height={70} src={"/image/logo.png"} />
@@ -61,11 +60,10 @@ const Navbar = () => {
           {navList.map((item, index) => (
             <Link
               href={item?.href}
-              className={`text-base text-[#2b2b2e] leading-7 font-bold   different border-none relative hover:border-none after:absolute after:w-0 after:h-[5px]  after:bottom-0 after:bg-[#2b2b2e] after:transition-all after:duration-200 after:ease-in-out after:rounded-full hover:after:w-full hover:after:left-0 ${
-                pathName == item?.href
+              className={`text-base text-[#2b2b2e] leading-7 font-bold   different border-none relative hover:border-none after:absolute after:w-0 after:h-[5px]  after:bottom-0 after:bg-[#2b2b2e] after:transition-all after:duration-200 after:ease-in-out after:rounded-full hover:after:w-full hover:after:left-0 ${pathName == item?.href
                   ? "after:w-full after:left-0"
                   : "after:left-1/2"
-              } `}
+                } `}
               key={index}
               aria-labelledby="labeldiv"
             >
@@ -78,7 +76,7 @@ const Navbar = () => {
         </div>
         <div className="hidden md:block">
           <Link
-            href={""}
+            href={"/contact"}
             aria-labelledby="labeldiv"
             className="relative inline-block py-4 px-8 rounded-full overflow-hidden group"
           >
@@ -111,9 +109,8 @@ const DrawerSidebar = ({ pathName }) => {
         {navList.map((item, index) => (
           <Link
             href={item?.href}
-            className={`text-base text-[#2b2b2e] leading-7 font-bold   different border-none relative hover:border-none after:absolute after:w-0 after:h-[5px] after:left-1/2 after:bottom-0 after:bg-[#2b2b2e] after:transition-all after:duration-200 after:ease-in-out after:rounded-full hover:after:w-full hover:after:left-0 ${
-              pathName == item?.href ? "after:w-full after:left-0" : ""
-            } `}
+            className={`text-base text-[#2b2b2e] leading-7 font-bold   different border-none relative hover:border-none after:absolute after:w-0 after:h-[5px] after:left-1/2 after:bottom-0 after:bg-[#2b2b2e] after:transition-all after:duration-200 after:ease-in-out after:rounded-full hover:after:w-full hover:after:left-0 ${pathName == item?.href ? "after:w-full after:left-0" : ""
+              } `}
             key={index}
             aria-labelledby="labeldiv"
           >
