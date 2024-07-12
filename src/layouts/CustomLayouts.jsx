@@ -11,8 +11,9 @@ const CustomLayouts = ({ children }) => {
     <div className=''>
 
       <motion.div
-        className="progress-bar"
+        className="progress-bar h-2 p-10"
         style={{ scaleX: scrollYProgress }}
+       
       />
       <Navbar />
       <ToastContainer
