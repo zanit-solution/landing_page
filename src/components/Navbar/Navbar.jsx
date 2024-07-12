@@ -47,22 +47,61 @@ const Navbar = () => {
   }, []);
   // route for active page navigation
   const pathName = usePathname();
+  // them and setheme mode code here 
+ 
+  const [theme, setTheme] = useState(
+   ""
+  );
+  useEffect(()=>{
+    const vla =  localStorage.getItem("theme")?localStorage.getItem("theme"):""
+    setTheme(vla);
+  },[])
+  
+  function onMatchWindow() {
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) &&  window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }
+  
+  useEffect(() => {
+    onMatchWindow();
+    switch (theme) {
+      case 'dark':
+        document.documentElement.classList.add("dark");
+        localStorage.setItem("theme", "dark");
+        break;
+      case 'light':
+        document.documentElement.classList.remove("dark");
+        localStorage.setItem("theme","light");
+        break;
+      default:
+        break;
+    }
+
+  }, [theme])
+  // ${shadow ? "shadow-md backdrop-blur-lg" : " bg-[#FEF6F3]"
+  // }
   return (
     <div className={`top-0 fixed   z-50  w-full `}>
       <nav
-        className={`flex items-center mx-auto     container justify-between px-4 py-4 md:p-0 ${shadow ? "shadow-md backdrop-blur-lg" : " bg-[#FEF6F3]"
-          }`}
+        className={`flex items-center mx-auto bg-red-900 dark:bg-black  container justify-between px-4 py-4 md:p-0`}
       >
         <div>
           <Image width={70} height={70} src={"/image/logo.png"} />
+          <div>
+            <button onClick={() => { setTheme("dark") }} className="text-white bg-red-900 p-3">dark</button>
+            <button onClick={() => { setTheme("light") }} className="bg-white dark:bg-black dark:text-white p-3 text-black">light</button>
+          </div>
         </div>
         <div className="hidden   md:flex gap-4">
           {navList.map((item, index) => (
             <Link
               href={item?.href}
               className={`text-base text-[#2b2b2e] leading-7 font-bold   different border-none relative hover:border-none after:absolute after:w-0 after:h-[5px]  after:bottom-0 after:bg-[#2b2b2e] after:transition-all after:duration-200 after:ease-in-out after:rounded-full hover:after:w-full hover:after:left-0 ${pathName == item?.href
-                  ? "after:w-full after:left-0"
-                  : "after:left-1/2"
+                ? "after:w-full after:left-0"
+                : "after:left-1/2"
                 } `}
               key={index}
               aria-labelledby="labeldiv"
