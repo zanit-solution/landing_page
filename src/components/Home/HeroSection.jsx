@@ -15,11 +15,11 @@ import React from 'react';
 
                         nibh arcu eu. Id sem varius malesuada tincidunt sodales.</p>
                     <div className='grid justify-start'>
-                        <button className=' my-10 ml-0 font-semibold rounded-lg bg-orange-600 text-white px-5 py-2'>Get Started now</button>
+                        <button className=' my-10 ml-0 font-semibold rounded-lg bg-orange-600 text-white px-5 py-2' aria-label='btn-area' >Get Started now</button>
                     </div>
                 </div>
                 <div className='flex justify-center'>
-                    <Image width={500} height={500} src={"/image/hero-img.png"} alt="" />
+                    <Image width={500} height={500} src={"/image/hero-img.png"} alt="loading" />
                 </div>
             </div>
        </section>

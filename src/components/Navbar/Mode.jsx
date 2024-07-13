@@ -74,6 +74,7 @@ function App() {
       <motion.button
         whileTap={{ scale: 0.97 }}
         onClick={() => setIsOpen(!isOpen)}
+        aria-label='area-lavel'
       >
         <div className="rounded-full"  >
           <span className="loader block ease-linear rounded-full  border border-gray-200  animate-spin p-2">
@@ -112,6 +113,7 @@ function App() {
               setTheme("light");
             }}
             className="hover:bg-gray-200 p-3 text-black"
+            aria-label='area-lavel'
           >
             <LuSunDim />
           </button>
@@ -122,6 +124,7 @@ function App() {
               setTheme("dark");
             }}
             className="hover:bg-black  hover:text-white p-3 text-black"
+            aria-label='area-lavel'
           >
             <FaRegMoon />
           </button> 

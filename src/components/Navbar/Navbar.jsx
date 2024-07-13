@@ -1,12 +1,13 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import Drawer from "react-modern-drawer";
+// import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Mode from "./Mode";
+import dynamic from 'next/dynamic';
 const navList = [
   {
     name: "home",
@@ -27,6 +28,7 @@ const navList = [
 ];
 const Navbar = () => {
   // hambergar menu use for click state
+  const pathName = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const toggleDrawer = () => {
     setIsOpen((prevState) => !prevState);
@@ -47,19 +49,24 @@ const Navbar = () => {
     };
   }, []);
   // route for active page navigation
-  const pathName = usePathname();
-  
-  
+  const Drawer = dynamic(() => import('react-modern-drawer'), { ssr: false });
+
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
   return (
     <div className={`top-0 fixed   z-50  w-full `}>
       {/* dark ligt mode component  */}
+      
       <Mode/>
       <nav
         className={`flex items-center mx-auto ${shadow ? "shadow-md backdrop-blur-lg dark:bg-black" : " bg-[#FEF6F3] dark:bg-black"
   }   container justify-between pr-4  md:p-0`}
       >
         <div>
-          <Image width={70} height={70} src={"/image/logo.png"} />
+          <Image width={70} height={70} src={"/image/logo.png"} alt="loading" />
           
         </div>
         <div className="hidden   md:flex gap-4">
@@ -74,7 +81,7 @@ const Navbar = () => {
               key={index}
               aria-labelledby="labeldiv"
             >
-              <button className="nav_link p-4 leading-10 capitalize ">
+              <button className="nav_link p-4 leading-10 capitalize " aria-label='area-lavel'>
                 {" "}
                 {item?.name}
               </button>
@@ -97,14 +104,15 @@ const Navbar = () => {
           onClick={() => toggleDrawer()}
           className=" cursor-pointer md:hidden dark:text-gray-200  "
           aria-labelledby="labeldiv"
+          aria-label='area-lavel'
         >
           <GiHamburgerMenu />
         </button>
       </nav>
       {/* drawer code here  */}
-      <Drawer open={isOpen} onClose={toggleDrawer} direction="right" className="dark:bg-black">
+     {  <Drawer open={isOpen} onClose={toggleDrawer} direction="right" className="dark:bg-black" >
         <DrawerSidebar pathName={pathName} />
-      </Drawer>
+      </Drawer>}
     </div>
   );
 };
@@ -122,7 +130,7 @@ const DrawerSidebar = ({ pathName }) => {
             key={index}
             aria-labelledby="labeldiv"
           >
-            <button className="nav_link p-4 leading-10 capitalize">
+            <button className="nav_link p-4 leading-10 capitalize" aria-label='area-lavel'>
               {" "}
               {item?.name}
             </button>

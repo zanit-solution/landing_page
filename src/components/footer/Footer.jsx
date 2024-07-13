@@ -9,9 +9,9 @@ const Footer = () => {
         <div className= 'container mx-auto  py-28 grid sm:grid-cols-2 xs:grid-cols-1 lg:grid-cols-4  gap-5'>
            <div className='grid'>
                 {/*   <img className='w-44' src={logo} alt="" /> */}
-                <Image className=' w-32 h-16' width={1000} height={1000} src={"/image/logo.png"}   />
+                <Image className=' w-32 h-16' width={1000} height={1000} src={"/image/logo.png"}  alt='loading' />
                 <p>Integer auctor aliquet martor, sed lorem malesuada eros blandit eget. Proin lacinia mortoc id odio vestibulum.</p>
-                <div className='relative items-center flex'> <input className='border p-3 rounded-lg bg-slate-100 sm:max-w-sm w-full' type="text" placeholder='Enter your Email' /> <button className='absolute right-1 py-2 px-4 rounded-lg bg-green-300'> <FaArrowRightLong></FaArrowRightLong> </button> </div>
+                <div className='relative items-center flex'> <input className='border p-3 rounded-lg bg-slate-100 sm:max-w-sm w-full' type="text" placeholder='Enter your Email' /> <button className='absolute right-1 py-2 px-4 rounded-lg bg-green-300' aria-label='area-lavel'> <FaArrowRightLong></FaArrowRightLong> </button> </div>
 
             </div>
             <div className='grid gap-2'>

@@ -7,7 +7,7 @@ const Page = () => {
     return (
         <div>
             <div className='container mx-auto'>
-                <Image className='w-full' width={1000} height={1000} src={"/image/contact-banner.webp"} />
+                <Image className='w-full' width={1000} height={1000} src={"/image/contact-banner.webp"} alt='loading'/>
             </div>
             <ContactForm></ContactForm>
             <ContactMap></ContactMap>

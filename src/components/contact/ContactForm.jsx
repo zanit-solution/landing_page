@@ -38,7 +38,7 @@ const ContactForm = () => {
         async function sendEmail() {
             try {
                 const response = await axios.post('/api/contact', formData);
-                console.log(response.data);
+               
                 if (response?.data) {
                     toast.update(toastId, {
                         ...toastObj,
@@ -48,8 +48,7 @@ const ContactForm = () => {
                     setFormData({ message_text: '', email: '', subject: '' });
                 }
             } catch (error) {
-                console.error('Error sending email:', error.response ? error.response.data : error.message);
-
+           
                 toast.update(toastId, {
                     ...toastObj,
                     render: error.message,
@@ -86,7 +85,7 @@ const ContactForm = () => {
                     <label className="block mb-2 font-bold text-gray-900 dark:text-white" htmlFor="message_text">Message</label>
                     <textarea id="message_text" value={formData.message_text} onChange={handleChange} className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Your Message" required />
                 </div>
-                <button type="submit" className="text-white bg-black rounded-md px-4 py-2 flex items-center" disabled={loading}>
+                <button type="submit" className="text-white bg-black rounded-md px-4 py-2 flex items-center" disabled={loading} aria-label='btn-spinner' >
                     {loading ? <div  >
                         <div className="spinner-border animate-spin inline-block w-6 h-6 border-4 rounded-full border-t-4 border-gray-200 border-t-blue-500"></div>
                     </div>

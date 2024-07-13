@@ -11,7 +11,7 @@ const CustomLayouts = ({ children }) => {
     <div className=''>
  
       <motion.div
-        className="progress-bar fixed top-0 left-0 right-0 h-2 bg-red-900"
+        className="progress-bar fixed top-0 left-0 right-0 h-2 bg-gradient-to-b from-blue-500 to-green-500"
         style={{ scaleX: scrollYProgress }}
        
       />

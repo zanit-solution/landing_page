@@ -1,11 +1,8 @@
-import { NextResponse,NextRequest } from 'next/server';
+import { NextResponse  } from 'next/server';
 const nodemailer = require('nodemailer');
 
-export async function POST(req) {
-   console.log("........................>>>")
+export async function POST(req) { 
    const data  =await req.json()
-   console.log(data)
- 
  try {
   var transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -22,14 +19,12 @@ export async function POST(req) {
     text: data?.message_text
   };
   
-  const info = await transporter.sendMail(mailOptions);
-  console.log('Email sent: ' + info.response);
+  const info = await transporter.sendMail(mailOptions); 
     return NextResponse.json({ message: 'Success: email was sent' });
- } catch (error) {
-  console.log(error.message)
+ } catch (error) { 
   return NextResponse.json({ message: 'COULD NOT SEND MESSAGE',error:error.message }, { status: 500 });
  }
- return NextResponse.json({ message: 'COULD NOT SEND MESSAGE',error:error.message }, { status: 500 });
+ 
 }
 
 

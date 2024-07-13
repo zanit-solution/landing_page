@@ -67,6 +67,7 @@ const Accordion = ({ title, content, isOpen, onClick }) => {
       <button
         className="w-full flex justify-between items-center p-4 bg-gray-100 hover:bg-gray-200 focus:outline-none"
         onClick={onClick}
+        aria-label='area-lavel'
       >
         <span>{title}</span>
         <svg
