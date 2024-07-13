@@ -11,7 +11,8 @@ import Transformation from "@/components/Home/Transformation";
 
 export default function Home() {
   return (
-    <main className="container mx-auto">
+    <main className=" bg-[#FEF6F3]">
+      <div className="container mx-auto">
       <HeroSection />
       <Support/>
       <Form/>
@@ -19,6 +20,8 @@ export default function Home() {
       <Transformation/>
       <Question/>
       <Blog/>
+      </div>
+     
     </main>
   );
 }

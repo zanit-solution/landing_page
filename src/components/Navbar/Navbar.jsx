@@ -5,7 +5,7 @@ import Link from "next/link";
 import "react-modern-drawer/dist/index.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import Mode from "./Mode";
 import dynamic from 'next/dynamic';
 const navList = [
@@ -65,16 +65,23 @@ const Navbar = () => {
   const includePath = pathName.includes('technologies');
  
   const isNavTransparent = includePath && typeof parseInt(seperatePath[2])=='number' ;
-  console.log(isNavTransparent,"------------------------------------------>")
-  const variableColor = isNavTransparent ? 'bg-red-500': shadow ? "shadow-md backdrop-blur-lg dark:bg-black" : " bg-[#FEF6F3] dark:bg-black"
- 
+   
+  const router = useSearchParams() 
+  const searchParam = router.get("search"); 
+  const data = JSON.parse(searchParam)
+  
+  const colorSeq = ['bg-[#61DBFB]', 'bg-[#68A063]', 'bg-[#ff0000]', 'bg-[#3fa037]', 'bg-[#303030]', 'bg-[#007ACC]']
+   const variableColor = isNavTransparent ? colorSeq[parseInt(data?.id)
+    - 1]: shadow ? "shadow-md backdrop-blur-lg dark:bg-black" : " bg-[#FEF6F3] dark:bg-black"
+   
   return (
-    <div className={`top-0 fixed   z-50  w-full `}>
+  
+      <div className={`top-0 fixed z-50  w-full ${variableColor} `}>
       {/* dark ligt mode component  */}
       
-      <Mode/>
+      {/* <Mode/> */}
       <nav
-        className={`flex items-center mx-auto ${variableColor}   container justify-between pr-4  md:p-0`}
+        className={`flex items-center container mx-auto justify-between pr-4  md:p-0`}
       >
         <div>
           <Image width={70} height={70} src={"/image/logo.png"} alt="loading" />
@@ -125,6 +132,7 @@ const Navbar = () => {
         <DrawerSidebar pathName={pathName} />
       </Drawer>}
     </div>
+  
   );
 };
 export default Navbar;

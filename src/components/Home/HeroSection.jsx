@@ -5,7 +5,7 @@ import React from 'react';
  const HeroSection = () => {
     return (
        <section className='md:pt-[72px] pt-[54px]'>
-         <div className='grid grid-cols-1 md:grid-cols-2 justify-center  bg-[#FEF6F3]  md:p-5 p-3 items-center'>
+         <div className='grid grid-cols-1 md:grid-cols-2 justify-center    md:p-5 p-3 items-center'>
                 <div className=''>
                     <div className='grid justify-start'>
                         <p className=' border rounded-full flex items-center pe-3   border-red-200 relative '><span className='p-1   bg-green-300 left-0 me-2 rounded-full  '><FaBell ></FaBell></span>   Business</p>
