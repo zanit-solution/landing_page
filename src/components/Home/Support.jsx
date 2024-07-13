@@ -6,6 +6,7 @@ const Support = () => {
   return (
     <div className="bg-[#FEF6F3] py-20  grid md:grid-cols-1 lg:grid-cols-3 gap-10">
       <div className="flex flex-col sm:flex-row items-center border rounded-xl bg-green-100 p-4">
+      
         <div className="p-4 m-4 sm:border-r-2 border-red-200 ">
           <IoSettingsOutline className="h-10 w-10" />
         </div>
