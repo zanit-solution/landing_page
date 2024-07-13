@@ -22,6 +22,10 @@ const navList = [
     href: "/service",
   },
   {
+    name: "technology",
+    href: "/technology",
+  },
+  {
     name: "support",
     href: "/support",
   },
