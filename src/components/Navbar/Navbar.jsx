@@ -60,14 +60,21 @@ const Navbar = () => {
   useEffect(() => {
     setIsClient(true);
   }, []);
+  console.log(pathName.split('/'));
+  const seperatePath = pathName.split('/');
+  const includePath = pathName.includes('technologies');
+ 
+  const isNavTransparent = includePath && typeof parseInt(seperatePath[2])=='number' ;
+  console.log(isNavTransparent,"------------------------------------------>")
+  const variableColor = isNavTransparent ? 'bg-red-500': shadow ? "shadow-md backdrop-blur-lg dark:bg-black" : " bg-[#FEF6F3] dark:bg-black"
+ 
   return (
     <div className={`top-0 fixed   z-50  w-full `}>
       {/* dark ligt mode component  */}
       
       <Mode/>
       <nav
-        className={`flex items-center mx-auto ${shadow ? "shadow-md backdrop-blur-lg dark:bg-black" : " bg-[#FEF6F3] dark:bg-black"
-  }   container justify-between pr-4  md:p-0`}
+        className={`flex items-center mx-auto ${variableColor}   container justify-between pr-4  md:p-0`}
       >
         <div>
           <Image width={70} height={70} src={"/image/logo.png"} alt="loading" />

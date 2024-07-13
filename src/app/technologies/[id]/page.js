@@ -1,7 +1,7 @@
 "use client"
-import React from 'react';
 import Image from 'next/image';
-import { useParams, usePathname, useRouter, useSearchParams } from 'next/navigation';
+import {   useSearchParams } from 'next/navigation';
+import React from 'react';
 
 const TechnologyDetail = () => {
 
