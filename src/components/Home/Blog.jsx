@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { EffectCoverflow,Autoplay } from 'swiper/modules';
+import { EffectCoverflow, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
@@ -16,30 +16,30 @@ const Blog = () => {
                     <p className='text-center border w-24 rounded-lg border-red-400 bg-green-200'>Our blog</p>
                 </div>
                 <div className='py-10'>
-                    <h1 className='text-5xl text-center font-bold py-5'>News and Knowledge</h1>
+                    <h1 className='text-5xl text-center font-bold py-5'>News and Insights</h1>
                     <p className='text-center'>
-                        Nulla aenean ipsum elit, adipiscing tristique nisi. Eget ultrices urna <br /> arcu quis. Tristique potenti vitae in adipiscing. Eu augue cras quis nec proin pharetra netus massa.
+                    Discover the latest industry news and valuable insights at Zan it solution. We provide informative articles and updates to keep you informed and inspired.
                     </p>
                 </div>
             </div>
             <Swiper
-               effect={'coverflow'}
-               grabCursor={true}
-               centeredSlides={true}
-               slidesPerView={'auto'}
-               coverflowEffect={{
-                 rotate: 50,
-                 stretch: 0,
-                 depth: 100,
-                 modifier: 1,
-                 slideShadows: true,
-               }}
-               autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-              }}
-               modules={[Autoplay,EffectCoverflow ]}
-                // className="mySwiper py-10"
+                effect={'coverflow'}
+                grabCursor={true}
+                centeredSlides={true}
+                slidesPerView={'auto'}
+                coverflowEffect={{
+                    rotate: 50,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: true,
+                }}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
+                modules={[Autoplay, EffectCoverflow]}
+            // className="mySwiper py-10"
             >
                 <SwiperSlide>
                     <div className='pe-10'>
