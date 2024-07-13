@@ -1,12 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Link from "next/link";
-// import Drawer from "react-modern-drawer";
+import Link from "next/link"; 
 import "react-modern-drawer/dist/index.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Image from "next/image";
-import { usePathname, useSearchParams } from "next/navigation";
-import Mode from "./Mode";
+import { usePathname, useSearchParams } from "next/navigation"; 
 import dynamic from 'next/dynamic';
 const navList = [
   {
