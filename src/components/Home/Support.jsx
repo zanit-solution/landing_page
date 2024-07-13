@@ -1,7 +1,6 @@
 import React from "react";
-import { FaHeadphones } from 'react-icons/fa';
 import { IoSettingsOutline } from 'react-icons/io5';
-import { MdMovieCreation } from 'react-icons/md';
+import { FcDataProtection, FcSupport } from "react-icons/fc";
 
 const Support = () => {
   return (
@@ -12,25 +11,25 @@ const Support = () => {
         </div>
         <div>
           <h1 className="font-bold text-2xl mb-3   sm:text-left text-center">Immediate Deployment</h1>
-          <p>Et vero eos et accusamus et iusto odio dignissimos</p>
+          <p>we ensure swift and efficient deployment of solutions to meet your business needs.</p>
         </div>
       </div>
       <div className="flex flex-col sm:flex-row  items-center border rounded-xl bg-green-100 p-4">
         <div className="p-4 m-4 sm:border-r-2 border-red-200 ">
-          <MdMovieCreation className="h-10 w-10" />
+          <FcDataProtection className="h-10 w-10" />
         </div>
         <div>
           <h1 className="font-bold text-2xl mb-3   sm:text-left text-center">DOS Protection</h1>
-          <p>But I need to clarify how this erroneous concept is</p>
+          <p>we clarify DOS (Denial-of-Service) protection. We safeguard systems from malicious attempts to disrupt services, ensuring continuous availability and reliability.</p>
         </div>
       </div>
       <div className="flex flex-col   sm:flex-row    items-center sm:border rounded-xl bg-green-100 p-4">
         <div className="p-4 m-4 sm:border-r-2 border-red-200 ">
-          <FaHeadphones className="h-10 w-10" />
+          <FcSupport className="h-10 w-10" />
         </div>
         <div>
           <h1 className="font-bold text-2xl mb-3   sm:text-left text-center">Premium Support</h1>
-          <p>we disapprove of those who uphold righteous indignation.</p>
+          <p>we deliver premium support without righteous indignation.</p>
         </div>
       </div>
     </div>
