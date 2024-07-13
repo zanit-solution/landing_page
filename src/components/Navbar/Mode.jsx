@@ -121,7 +121,7 @@ function App() {
             onClick={() => {
               setTheme("dark");
             }}
-            className="hover:bg-black  hover:dark:text-white p-3 text-black"
+            className="hover:bg-black  hover:text-white p-3 text-black"
           >
             <FaRegMoon />
           </button> 

@@ -55,8 +55,8 @@ const Navbar = () => {
       {/* dark ligt mode component  */}
       <Mode/>
       <nav
-        className={`flex items-center mx-auto ${shadow ? "shadow-md backdrop-blur-lg" : " bg-[#FEF6F3]"
-  }   container justify-between px-4 py-4 md:p-0`}
+        className={`flex items-center mx-auto ${shadow ? "shadow-md backdrop-blur-lg dark:bg-black" : " bg-[#FEF6F3] dark:bg-black"
+  }   container justify-between pr-4  md:p-0`}
       >
         <div>
           <Image width={70} height={70} src={"/image/logo.png"} />
@@ -70,11 +70,11 @@ const Navbar = () => {
                 pathName == item?.href
                   ? "after:w-full after:left-0"
                   : "after:left-1/2"
-              } `}
+              }  dark:text-gray-200 dark:after:bg-gray-200`}
               key={index}
               aria-labelledby="labeldiv"
             >
-              <button className="nav_link p-4 leading-10 capitalize">
+              <button className="nav_link p-4 leading-10 capitalize ">
                 {" "}
                 {item?.name}
               </button>
@@ -95,14 +95,14 @@ const Navbar = () => {
         </div>
         <button
           onClick={() => toggleDrawer()}
-          className=" cursor-pointer md:hidden"
+          className=" cursor-pointer md:hidden dark:text-gray-200  "
           aria-labelledby="labeldiv"
         >
           <GiHamburgerMenu />
         </button>
       </nav>
       {/* drawer code here  */}
-      <Drawer open={isOpen} onClose={toggleDrawer} direction="right">
+      <Drawer open={isOpen} onClose={toggleDrawer} direction="right" className="dark:bg-black">
         <DrawerSidebar pathName={pathName} />
       </Drawer>
     </div>
@@ -111,14 +111,14 @@ const Navbar = () => {
 export default Navbar;
 const DrawerSidebar = ({ pathName }) => {
   return (
-    <div className=" text-black h-full">
+    <div className=" text-black h-full dark:bg-black ">
       <div className="flex flex-col items-center justify-center">
         {navList.map((item, index) => (
           <Link
             href={item?.href}
-            className={`text-base text-[#2b2b2e] leading-7 font-bold   different border-none relative hover:border-none after:absolute after:w-0 after:h-[5px] after:left-1/2 after:bottom-0 after:bg-[#2b2b2e] after:transition-all after:duration-200 after:ease-in-out after:rounded-full hover:after:w-full hover:after:left-0 ${
+            className={`text-base text-[#2b2b2e] leading-7 font-bold   different border-none relative hover:border-none after:absolute after:w-0 after:h-[5px] after:left-1/2 after:bottom-0 after:bg-[#2b2b2e] after:transition-all after:duration-200 after:ease-in-out after:rounded-full hover:after:w-full hover:after:left-0  ${
               pathName == item?.href ? "after:w-full after:left-0" : ""
-            } `}
+            } dark:text-gray-200 dark:after:bg-gray-200 `}
             key={index}
             aria-labelledby="labeldiv"
           >

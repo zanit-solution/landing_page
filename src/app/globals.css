@@ -32,7 +32,7 @@
   left: 0;
   right: 0;
   height: 10px;
-  background: red;
+  /* background: red; */
   transform-origin: 0%;
   z-index: 100000000000000000;
 }
