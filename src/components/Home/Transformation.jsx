@@ -5,12 +5,13 @@ const Transformation = () => {
     return (
         <div className=' bg-slate-100 mt-5'>
             <div className='grid sm:grid-cols-1 lg:grid-cols-2 justify-center sm:gap-3 md:gap-4 lg:gap-5 py-10 items-center'>
-                <div className='py-10'><Image className='rounded-lg sm:w-full sm:w-[300px]' src={"/image/team.jpg"} width={1000} height={1000} alt='loading' />
+                <div className='py-10'><Image className='rounded-lg sm:w-full' src={"/image/team.jpg"} width={1000} height={1000} alt='loading' />
                 </div>
-                <div className='py-10'>
-                    <div className='bg-white p-10 rounded-lg'><h1 className='text-3xl font-medium'>Transforming Challenges into Profit</h1>
-                        <p className='py-5'>Intuition and strategy form the foundation of our research methodology, which we apply to both traditional and digital media.</p>
-                        <p>We firmly believe that the human element is vital in initiating any successful project, as it is here that meaningful emotional connections between the company and individuals are cultivated.</p>
+                <div className='py-12 px-2'>
+                    <div className='bg-white p-10 rounded-lg'><h1 className='text-3xl font-medium'>Driving Success Through Insightful Strategies</h1>
+                        <p className='py-5'>At Zan It solution, we leverage intuition and strategic research methodologies across traditional and digital media. <br />
+
+                            We believe in the power of human connection to drive successful projects. By fostering meaningful emotional bonds, we cultivate lasting relationships between businesses and individuals.</p>
                     </div>
                     <div className='p-10 flex gap-10'>
                         <div>
