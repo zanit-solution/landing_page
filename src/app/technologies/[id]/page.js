@@ -1,7 +1,7 @@
 "use client"
+import React from 'react';
 import Image from 'next/image';
 import {   useSearchParams } from 'next/navigation';
-import React from 'react';
 
 const TechnologyDetail = () => {
 
@@ -14,7 +14,7 @@ const TechnologyDetail = () => {
     const colorSeq = ['bg-[#61DBFB]', 'bg-[#68A063]', 'bg-[#ff0000]', 'bg-[#3fa037]', 'bg-[#303030]', 'bg-[#007ACC]']
     return (
         <div className={`${colorSeq[parseInt(data?.id)
-            - 1]}`}>
+            - 1]} pt-52`}>
             <div className='container mx-auto py-10 grid grid-cols-2 justify-around gap-10 items-center'>
                 <div>
                     <h1 className='text-5xl font-bold'>{data?.name}</h1>

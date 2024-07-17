@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import Link from "next/link"; 
 import "react-modern-drawer/dist/index.css";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -64,17 +64,16 @@ const Navbar = () => {
  
   const isNavTransparent = includePath && typeof parseInt(seperatePath[2])=='number' ;
    
-  const router = useSearchParams() 
-  const searchParam = router.get("search"); 
-  const data = JSON.parse(searchParam)
+  // const router = useSearchParams() 
+  // const searchParam = router.get("search"); 
+  // const data = JSON.parse(searchParam)
   
   const colorSeq = ['bg-[#61DBFB]', 'bg-[#68A063]', 'bg-[#ff0000]', 'bg-[#3fa037]', 'bg-[#303030]', 'bg-[#007ACC]']
-   const variableColor = isNavTransparent ? colorSeq[parseInt(data?.id)
-    - 1]: shadow ? "shadow-md backdrop-blur-lg dark:bg-black" : " bg-[#FEF6F3] dark:bg-black"
+   const variableColor =  shadow ? "shadow-md backdrop-blur-lg dark:bg-black" : " bg-[#FEF6F3] dark:bg-black"
    
   return (
-  
-      <div className={`top-0 fixed z-50  w-full ${variableColor} `}>
+    <Suspense>
+ <div className={`top-0 fixed z-50  w-full ${variableColor} `}>
       {/* dark ligt mode component  */}
       
       {/* <Mode/> */}
@@ -130,6 +129,8 @@ const Navbar = () => {
         <DrawerSidebar pathName={pathName} />
       </Drawer>}
     </div>
+    </Suspense>
+     
   
   );
 };

@@ -1,6 +1,8 @@
-import Banner from '@/components/technolgy/Bannner';
-import Technolgys from '@/components/technolgy/Technologys';
+ 
+"use client"
 import React from 'react';
+import Banner from '@/components/Technolgy/Bannner';
+import Technolgys from '@/components/Technolgy/Technologys';
 
 const Technology = () => {
     return (

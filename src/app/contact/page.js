@@ -1,7 +1,7 @@
-import ContactForm from '@/components/contact/ContactForm';
-import ContactMap from '@/components/contact/ContactMap';
-import Image from 'next/image';
 import React from 'react';
+import ContactForm from '@/components/Contact/ContactForm';
+import ContactMap from '@/components/Contact/ContactMap';
+import Image from 'next/image';
 
 const Page = () => {
     return (

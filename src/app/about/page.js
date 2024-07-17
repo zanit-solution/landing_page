@@ -1,7 +1,7 @@
-import Team from '@/components/about/team';
 import React from 'react';
+import Team from '@/components/About/Team';
 
-const About = () => {
+const Home = () => {
   return (
     <div className='container mx-auto pt-28'>
       <Team></Team>
@@ -9,4 +9,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Home;

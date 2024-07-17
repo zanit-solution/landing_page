@@ -1,5 +1,5 @@
 "use client"
-import Footer from '@/components/footer/Footer';
+import Footer from '@/components/Footer/Footer';
 import Navbar from '@/components/Navbar/Navbar';
 import React, { useState } from 'react';
 import { ToastContainer } from 'react-toastify';
