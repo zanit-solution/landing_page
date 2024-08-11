@@ -6,7 +6,7 @@ const Banner = () => {
         <div className='relative'>
             <div className=''>
                 <div>
-                    <Image height={1000} width={1000} src={"/image/technology.jpg"} className='w-full' />
+                    <img   src={"/image/technology.jpg"} className='w-full h-[500px]' />
                 </div>
 
             </div>
