@@ -15,12 +15,12 @@ const TechnologyDetail = () => {
     return (
         <div className={`${colorSeq[parseInt(data?.id)
             - 1]} pt-52`}>
-            <div className='container mx-auto py-10 grid grid-cols-2 justify-around gap-10 items-center'>
+            <div className='container mx-auto py-10 grid md:grid-cols-2 lg:grid-cols-2 justify-around gap-10 items-center'>
                 <div>
-                    <h1 className='text-5xl font-bold'>{data?.name}</h1>
-                    <p className='text-xl py-10'>{data?.description}</p>
+                    <h1 className='text-5xl px-5 font-bold'>{data?.name}</h1>
+                    <p className='text-xl py-10 px-5'>{data?.description}</p>
                 </div>
-                <div><Image className='w-sm h-sm' height={1000} width={1000} src={data?.image} alt="" /></div>
+                <div><img className='w-sm h-sm' height={1000} width={1000} src={data?.image} alt="" /></div>
 
             </div>
         </div>

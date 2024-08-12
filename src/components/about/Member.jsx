@@ -9,7 +9,7 @@ const Member = ({ item, index }) => {
                 index % 2 === 0 ?
                     <div className='flex flex-col md:flex-row justify-around gap-10 items-center'>
                         <div>
-                            <Image height={5000} width={500} src={img} className='max-w-[300px] max-h-[350px] rounded-lg shadow-xl' alt='loading'/> 
+                            <img height={5000} width={500} src={img} className='max-w-[300px] max-h-[350px] rounded-lg shadow-xl' alt='loading'/> 
                         </div>
                         <div className='text-center md:text-left'>
                             <h1 className='text-5xl text-orange-600 font-bold'>{title}</h1>
@@ -25,7 +25,7 @@ const Member = ({ item, index }) => {
                             <p>{description}</p>
                         </div>
                         <div>
-                            <Image height={5000} width={500} src={img} className='max-w-[300px] max-h-[350px] rounded-lg shadow-xl' alt='loading'/> 
+                            <img height={5000} width={500} src={img} className='max-w-[300px] max-h-[350px] rounded-lg shadow-xl' alt='loading'/> 
                         </div>
                     </div>
             }
