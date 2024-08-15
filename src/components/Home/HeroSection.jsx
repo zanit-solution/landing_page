@@ -17,7 +17,7 @@ const HeroSection = () => {
                     </div>
                 </div>
                 <div className='flex justify-center'>
-                    <Image width={500} height={500} src={"/image/hero-img.png"} alt="loading" />
+                    <img  className='max-h-96 max-w-96' src={"/image/hero-img.png"} alt="loading" />
                 </div>
             </div>
         </section>
